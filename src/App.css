@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100&display=swap');
+/*100i, 400, 500, 700*/
+
+* {
+    font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+    margin: 10px;
+    color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    background-color: black;
+    margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar {
+    padding: 2px 0;
+    background-color: #ffc8dd;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px #ffc8dd;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar ul {
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: flex-start;
+    color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar ul li {
+    margin: 0 40px;
+}
+
+.navbar ul li:first-child {
+    margin-left: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.main-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-form {
+    border: 1px solid #ffc8dd;
+    width: 30%;
+    background-color: black;
+    box-shadow: 0 0 20px #ffc8dd;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.todo-box {
+    margin: 10px;
+    border: 2px solid white;
+    background-color: black;
+    box-shadow: 0 0 10px white;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 2rem;
+    font-size: 1.2rem;
+}
+
+.todo-box::placeholder {
+    color: white;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.new-todo-but {
+    margin: 10px;
+    padding: 5px 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: #ffc8dd;
+    border: 1px solid #ffc8dd;
+    border-radius: 5px;
+}
+
+.new-todo-but:hover {
+    background-color: black;
+    color: white;
 }
