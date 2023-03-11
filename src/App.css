@@ -93,6 +93,10 @@ li {
     color: white;
 }
 
-.listoftodo {
+.todo-cell {
+    border: 1px solid white;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
     color: white;
 }

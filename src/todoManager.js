@@ -1,6 +1,6 @@
 import './App.css'
-import TodoList from './data'
 import { useState } from 'react'
+import Todo from './todo'
 
 const initialTodoList = [
     {
@@ -17,6 +17,15 @@ const initialTodoList = [
     }
 ]
 let nextid = 4;
+
+export function TodoList({ todoList }) {
+
+    const listItems = todoList.map(todo =>
+        <Todo key={todo.id} todo={todo} />
+    );
+    return <ul>{listItems}</ul>;
+}
+
 export default function TodoManager() {
 
     const [todoList, setTodoList] = useState(initialTodoList)
