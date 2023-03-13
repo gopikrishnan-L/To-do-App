@@ -18,10 +18,10 @@ const initialTodoList = [
 ]
 let nextid = 4;
 
-export function TodoList({ todoList }) {
+export function TodoList({ todoList, handleDelete }) {
 
     const listItems = todoList.map(todo =>
-        <Todo key={todo.id} todo={todo} />
+        <Todo key={todo.id} todo={todo} handleDelete={handleDelete} />
     );
     return <ul>{listItems}</ul>;
 }
@@ -30,6 +30,11 @@ export default function TodoManager() {
 
     const [todoList, setTodoList] = useState(initialTodoList)
     const [text, setText] = useState('')
+
+    function handleDelete(id) {
+        setTodoList(todoList.filter((t) => t.id !== id))
+    }
+
     return (
         <>
             <form className='todo-form'
@@ -46,7 +51,7 @@ export default function TodoManager() {
                 <input className='todo-box' type='text' placeholder='New to-do' onChange={e => setText(e.target.value)} />
                 <button className='new-todo-but'>Add</button>
             </form>
-            <TodoList todoList={todoList} />
+            <TodoList todoList={todoList} handleDelete={handleDelete} />
         </>
     )
 }

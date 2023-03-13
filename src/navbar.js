@@ -4,9 +4,10 @@ export default function Navbar() {
     return (
         <>
             <div className='navbar'>
-                <ul>
-                    <li>Home</li>
-                </ul>
+                <div className='wrapper'>
+                    <a href='https://www.google.com'>Home</a>
+                    <a href='https://www.google.com'>About</a>
+                </div>
             </div>
         </>
     )

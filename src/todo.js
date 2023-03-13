@@ -1,9 +1,12 @@
 import './styles/App.css';
 
-export default function Todo({ todo }) {
+export default function Todo({ todo, handleDelete }) {
     return (
-        <li className='todo-cell'>
-            {todo.id} - {todo.todo}
-        </li>
+        <div className='todo-cell'>
+            <li >
+                {todo.id} - {todo.todo}
+            </li>
+            <button className='del-todo-but' onClick={() => handleDelete(todo.id)}>Delete</button>
+        </div>
     )
 }
